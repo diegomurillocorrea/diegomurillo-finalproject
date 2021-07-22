@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "Druk";
+        src: url( "../public/fonts/Druk/DrukTextWide-Bold.ttf" ) format( "truetype" );
+    }
+
+    @font-face {
+        font-family: "Noto Sans";
+        src: url( "../public/fonts/NotoSans/NotoSans-Regular.ttf" ) format( "truetype" );
+    }
+
+    @font-face {
+        font-family: "Syne";
+        src: url( "../public/fonts/Syne/Syne-Regular.ttf" ) format( "truetype" );
+    }
+}

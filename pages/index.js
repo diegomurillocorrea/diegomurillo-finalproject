@@ -1,9 +1,14 @@
-const Home = () => {
+import Head from "next/head";
+import Link from "next/link";
+
+const IndexPage = () => {
     return (
         <div>
-            <h1>Hello World!</h1>
+            <Head>
+                <title>Foodies</title>
+            </Head>
         </div>
     );
 };
 
-export default Home;
+export default IndexPage;
