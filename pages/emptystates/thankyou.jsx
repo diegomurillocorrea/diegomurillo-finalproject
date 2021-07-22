@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import thankYouImg from "../../public/images/thankYou.svg";
+import thankYouImg from "../../public/images/emptyStateImages/thankYou.svg";
 
 const thankYouScreen = () => {
     return (

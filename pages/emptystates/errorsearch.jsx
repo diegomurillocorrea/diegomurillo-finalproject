@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import errorSearchImg from "../../public/images/errorSearch.svg";
+import errorSearchImg from "../../public/images/emptyStateImages/errorSearch.svg";
 
 const ErrorSearchScreen = () => {
     return (
