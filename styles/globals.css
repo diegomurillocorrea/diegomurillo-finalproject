@@ -18,3 +18,7 @@
         src: url( "../public/fonts/Syne/Syne-Regular.ttf" ) format( "truetype" );
     }
 }
+
+.w-span {
+    width: 64%;
+}
