@@ -20,11 +20,11 @@
 }
 
 .w-span {
-    width: 64%;
+    width: 70%;
 }
 
 .w-hamburger-bg {
-    width: 53%;
+    width: 54%;
 }
 
 .w-hamburger {
@@ -33,4 +33,16 @@
 
 .mt-26 {
     margin-top: 6.5rem;
+}
+
+.w-food-art {
+    width: 55%;
+}
+
+.w-food-d {
+    width: 45%;
+}
+
+.mt-88 {
+    margin-top: 22rem;
 }
