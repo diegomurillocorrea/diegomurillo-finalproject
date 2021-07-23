@@ -10,6 +10,7 @@ module.exports = {
       },
       colors: {
         yellow: {
+          "200": "#FFF1BF",
           DEFAULT: "#FFD600"
         },
       }

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Foodies from "./home/Foodies";
 import FoodiesInfo from "./home/FoodiesInfo";
+import FoodiesMap from "./home/FoodiesMap";
 
 const IndexPage = () => {
     return (
@@ -10,6 +11,7 @@ const IndexPage = () => {
             </Head>
             <Foodies />
             <FoodiesInfo />
+            <FoodiesMap />
         </div>
     );
 };

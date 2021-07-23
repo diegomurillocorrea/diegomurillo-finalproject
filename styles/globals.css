@@ -46,3 +46,11 @@
 .mt-88 {
     margin-top: 22rem;
 }
+
+.w-input {
+    width: 45%;
+}
+
+.w-map {
+    width: 55%;
+}
