@@ -5,7 +5,7 @@ import FoodiesMap from "./home/FoodiesMap";
 
 const IndexPage = () => {
     return (
-        <div className="w-full">
+        <div>
             <Head>
                 <title>Foodies</title>
             </Head>
