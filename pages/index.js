@@ -1,7 +1,9 @@
 import Head from "next/head";
 import Foodies from "./home/Foodies";
+import FoodiesForm from "./home/FoodiesForm";
 import FoodiesInfo from "./home/FoodiesInfo";
 import FoodiesMap from "./home/FoodiesMap";
+import FoodiesSlide from "./home/FoodiesSlide";
 
 const IndexPage = () => {
     return (
@@ -12,6 +14,8 @@ const IndexPage = () => {
             <Foodies />
             <FoodiesInfo />
             <FoodiesMap />
+            <FoodiesSlide />
+            <FoodiesForm />
         </div>
     );
 };
