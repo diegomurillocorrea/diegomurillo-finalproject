@@ -1,11 +1,13 @@
 const FoodiesSlide = () => {
     return (
-        <div className="flex flex-row w-full mt-10">
+        <div className="flex flex-row w-full mt-10 mb-5">
+
             <div className="w-1/4">
                 <div className="w-full mb-10">
                     <img src="../../images/home/ketchupBg1.svg" alt="ketchupBg1.svg" />
                 </div>
             </div>
+
             <div className="w-2/4 flex flex-col justify-center items-center space-y-5">
                 <h1 className="font-druk text-3xl text-center">
                     "El mejor lugar para degustar en familia y amigos!"
@@ -26,12 +28,11 @@ const FoodiesSlide = () => {
                     </button>
                 </div>
             </div>
-            <div className="w-1/4 relative">
-                <div className="w-full absolute z-10">
-                    <img src="../../images/home/ketchupBottle.png" alt="ketchupBottle.png" className="mt-10" />
-                </div>
-                <div className="w-full z-0">
-                    <img src="../../images/home/ketchupBg2.svg" alt="ketchupBg2.svg" className="ml-30 mt-10" />
+
+            <div className="w-1/4 flex">
+                <div className="w-full flex flex-row justify-end">
+                    <img src="../../images/home/ketchupBg2.svg" alt="ketchupBg2.svg" className="absolute mt-20" />
+                    <img src="../../images/home/ketchupBottle.png" alt="ketchupBottle.png" className="absolute -mt-10" />
                 </div>
             </div>
         </div>
