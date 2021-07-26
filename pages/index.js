@@ -4,6 +4,7 @@ import FoodiesForm from "./home/FoodiesForm";
 import FoodiesInfo from "./home/FoodiesInfo";
 import FoodiesMap from "./home/FoodiesMap";
 import FoodiesSlide from "./home/FoodiesSlide";
+import FoodiesApp from "./home/FoodiesApp";
 import FoodiesFooter from "./home/FoodiesFooter";
 
 const IndexPage = () => {
@@ -17,6 +18,7 @@ const IndexPage = () => {
             <FoodiesMap />
             <FoodiesSlide />
             <FoodiesForm />
+            <FoodiesApp />
             <FoodiesFooter />
         </div>
     );

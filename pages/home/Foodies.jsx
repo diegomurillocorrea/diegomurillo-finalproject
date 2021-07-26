@@ -4,10 +4,10 @@ const Foodies = () => {
     return (
         <div className="w-full">
             <div className="flex justify-end absolute -mt-12 w-full">
-                <img src="../../images/home/hamburgerBg.svg" className="w-hamburger-bg" />
+                <img src="../../images/home/hamburgerBg.svg" alt="hamburgerBg.svg" className="w-hamburger-bg" />
             </div>
             <div className="flex justify-end absolute w-full -ml-20 mt-26 z-0">
-                <img src="../../images/home/hamburger.png" className="w-hamburger" />
+                <img src="../../images/home/hamburger.png" alt="hamburger.png" className="w-hamburger" />
             </div>
             <nav className="flex flex-row justify-around mt-11 relative z-10">  
                 <div className="w-1/4 flex justify-center">
@@ -22,7 +22,7 @@ const Foodies = () => {
                     <Link href="#">
                         <a className="font-syne mx-5">Restaurantes</a>
                     </Link>
-                    <Link href="./menu">
+                    <Link href="./menu/FoodiesMenu">
                         <a className="font-syne mx-5">Menú</a>
                     </Link>
                     <Link href="#">

@@ -8,13 +8,13 @@ const FoodiesForm = () => {
             <form>
                 <div className="flex flex-row justify-center mt-7">
                     <div className="flex flex-col mr-10 space-y-3">
-                        <label htmlFor="nameAndLastname" className="font-noto text-xs text-yellow flex flex-col">
+                        <label htmlFor="nameAndLastname" className="font-noto text-xs text-yellow-600 flex flex-col w-72">
                             Nombre y apellido
-                            <input type="text" id="nameAndLastname" placeholder="John Doe" className="px-5 py-3 border-2 rounded border-yellow placeholder-yellow text-base bg-transparent mt-2" />
+                            <input type="text" id="nameAndLastname" placeholder="John Doe" className="w-full px-5 py-3 border-2 rounded border-yellow-600 placeholder-yellow-600 text-base bg-transparent mt-2" />
                         </label>
                         <label htmlFor="email" className="font-noto text-xs text-gray-400 flex flex-col">
                             Correo electrónico
-                            <input type="email" id="email" placeholder="j.doe@correo.com" className="px-5 py-3 border-2 rounded text-base bg-transparent mt-2 border-gray-400" />
+                            <input type="email" id="email" placeholder="j.doe@correo.com" className="w-full px-5 py-3 border-2 rounded text-base bg-transparent mt-2 border-gray-400" />
                         </label>
                     </div>
                     <div>
