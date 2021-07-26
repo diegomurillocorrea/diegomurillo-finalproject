@@ -35,10 +35,6 @@
     margin-top: 6.5rem;
 }
 
-.w-food-art {
-    width: 55%;
-}
-
 .w-food-d {
     width: 45%;
 }
@@ -51,7 +47,9 @@
     width: 45%;
 }
 
-.w-map {
+.w-food-art,
+.w-map,
+.w-footer {
     width: 55%;
 }
 

@@ -24,7 +24,7 @@ const FoodiesForm = () => {
                         </label>
                     </div>
                 </div>
-                <div className="px-72 flex flex-row justify-end -mr-12 mt-5">
+                <div className="flex flex-row justify-end mt-5 mx-60">
                     <input type="submit" value="Enviar comentarios" className="px-5 py-3 rounded bg-yellow font-noto font-bold" />
                 </div>
             </form>
