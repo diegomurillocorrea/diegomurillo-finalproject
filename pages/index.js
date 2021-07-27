@@ -6,13 +6,14 @@ import FoodiesMap from "./home/FoodiesMap";
 import FoodiesSlide from "./home/FoodiesSlide";
 import FoodiesApp from "./home/FoodiesApp";
 import FoodiesFooter from "./home/FoodiesFooter";
+import Dropdown from "./Dropdown";
 
 const IndexPage = () => {
     return (
         <div>
             <Head>
                 <title>Foodies</title>
-            </Head>
+            </Head> 
             <Foodies />
             <FoodiesInfo />
             <FoodiesMap />
@@ -20,6 +21,8 @@ const IndexPage = () => {
             <FoodiesForm />
             <FoodiesApp />
             <FoodiesFooter />
+            {/*<Dropdown /> */}
+            
         </div>
     );
 };

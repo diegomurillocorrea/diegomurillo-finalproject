@@ -1,3 +1,27 @@
+import Map from "./Map";
+import credentials from "./credentials";
+const mapUrl = `https://maps.googleapis.com/maps/api/js?v=3.exp&key=${credentials.mapsKey}`;
+
+const NormalMapCard = () => {
+    return (
+        <div className="pl-5 pr-44 py-3 border border-gray-500 rounded-md">
+            <h1 className="font-syne font-bold text-xl">Sucursal San Benito</h1>
+            <p className="font-noto">Abierto de 12:00 m.d. - 9:00 p.m.</p>
+            <p className="font-noto">Calle la Reforma #543, Colonia San Benito</p>
+        </div>
+    );
+};
+
+const SelectedMapCard = () => {
+    return (
+        <div className="bg-yellow-200 pl-5 pr-44 py-3 rounded-md mt-2">
+            <h1 className="font-syne font-bold text-xl">Sucursal San Benito</h1>
+            <p className="font-noto">Abierto de 12:00 m.d. - 9:00 p.m.</p>
+            <p className="font-noto">Calle la Reforma #543, Colonia San Benito</p>
+        </div>
+    );
+};
+
 const FoodiesMap = () => {
     return (
         <div className="flex flex-row w-full mt-36">
@@ -18,25 +42,18 @@ const FoodiesMap = () => {
                     <input type="search" placeholder="Buscar nombre o dirección" className="ml-5 w-full text-base font-noto font-extralight" />
                 </div>
                 <div className="flex flex-col items-end mr-5 space-y-2">
-                    <div className="bg-yellow-200 pl-5 pr-44 py-3 rounded-md mt-2">
-                        <h1 className="font-syne font-bold text-xl">Sucursal San Benito</h1>
-                        <p className="font-noto">Abierto de 12:00 m.d. - 9:00 p.m.</p>
-                        <p className="font-noto">Calle la Reforma #543, Colonia San Benito</p>
-                    </div>
-                    <div className="pl-5 pr-44 py-3 border border-gray-500 rounded-md">
-                        <h1 className="font-syne font-bold text-xl">Sucursal San Benito</h1>
-                        <p className="font-noto">Abierto de 12:00 m.d. - 9:00 p.m.</p>
-                        <p className="font-noto">Calle la Reforma #543, Colonia San Benito</p>
-                    </div>
-                    <div className="pl-5 pr-44 py-3 border border-gray-500 rounded-md">
-                        <h1 className="font-syne font-bold text-xl">Sucursal San Benito</h1>
-                        <p className="font-noto">Abierto de 12:00 m.d. - 9:00 p.m.</p>
-                        <p className="font-noto">Calle la Reforma #543, Colonia San Benito</p>
-                    </div>
+                    <SelectedMapCard />
+                    <NormalMapCard />
+                    <NormalMapCard />
                 </div>
             </div>
             <div className="w-map">
-                <img src="../../images/home/mapSV.png" alt="mapSV.png" />
+                <Map
+                    googleMapURL={ mapUrl }
+                    containerElement={ <div style={{ height: "515px" }} /> }
+                    mapElement={ <div style={{ height: "100%" }} /> }
+                    loadingElement={ <p className="font-syne font-bold">Loading...</p> }
+                />
             </div>
         </div>
     );
