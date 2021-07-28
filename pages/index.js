@@ -1,12 +1,13 @@
 import Head from "next/head";
-import Foodies from "./home/Foodies";
+/* import FoodiesHeader from "./home/FoodiesHeader"; */
+import Foodiescopy from "./home/Foodiescopy";
+import FoodiesHeader from "./home/FoodiesHeader";
 import FoodiesForm from "./home/FoodiesForm";
 import FoodiesInfo from "./home/FoodiesInfo";
 import FoodiesMap from "./home/FoodiesMap";
 import FoodiesSlide from "./home/FoodiesSlide";
 import FoodiesApp from "./home/FoodiesApp";
 import FoodiesFooter from "./home/FoodiesFooter";
-import Dropdown from "./Dropdown";
 
 const IndexPage = () => {
     return (
@@ -14,15 +15,14 @@ const IndexPage = () => {
             <Head>
                 <title>Foodies</title>
             </Head> 
-            <Foodies />
-            <FoodiesInfo />
+            <FoodiesHeader />
+            {/* <Foodiescopy /> */}
+            {/* <FoodiesInfo />
             <FoodiesMap />
             <FoodiesSlide />
             <FoodiesForm />
             <FoodiesApp />
-            <FoodiesFooter />
-            {/*<Dropdown /> */}
-            
+            <FoodiesFooter /> */}
         </div>
     );
 };

@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 import FoodiesFooter from "../home/FoodiesFooter";
+import menu from "../api/menu";
+import categories from "../api/categories";
 
 const FoodiesMenuHead = () => {
     return (
@@ -10,19 +12,10 @@ const FoodiesMenuHead = () => {
     );  
 };
 
-export async function getServerSideProps () {
-    const defaultEndPoint = "https://api.elaniin.dev/api/menu";
-    const res = await fetch( defaultEndPoint );
-    const fullData = await res.json();
-    const dataFull = fullData.data;
-    return {
-        props: { 
-            dataFull
-        }
-    };
-};
+/* const dataFullMenu = menu;
+const dataFullCategories = categories; */
 
-export default function FoodiesMenu ( { dataFull } ) {
+export default function FoodiesMenu ( /* { dataFullMenu, dataFullCategories } */ ) {
     return (
         <div>
             <FoodiesMenuHead />
@@ -76,20 +69,22 @@ export default function FoodiesMenu ( { dataFull } ) {
                             </li>
                             <span className="w-16 h-2 absolute -ml-2 mt-3 bg-yellow"></span>
                         </div>
-                        <li>
-                            Las tradicionales
-                        </li>
-                        <li>
-                            Recomendaciones
-                        </li>
-                        <li>
-                            Para compartir
-                        </li>
+                        {/* {
+                            .map( ( { id, name } ) => {
+                                return (
+                                    <>
+                                        <li key={ id }>
+                                            { name }
+                                        </li>
+                                    </>
+                                );
+                            } )
+                        } */}
                     </ul>
                 </div>
             </div>
             <div className="w-full mt-16 px-14 grid grid-cols-4 gap-4">
-                { dataFull.map( ( { id, name, image, description, price, category } ) => {
+                {/* { .map( ( { id, name, image, description, price, category } ) => {
                     return (
                         <div className="w-full rounded-lg m-2" key={ id }>
                             <div>
@@ -107,7 +102,7 @@ export default function FoodiesMenu ( { dataFull } ) {
                             </div>
                         </div>
                         ) 
-                    } ) }
+                    } ) } */}
             </div>
             <div className="m-20 flex flex-row justify-center space-x-2">
                 <button className="bg-black text-yellow border font-bold border-black px-4 py-2 rounded-md">1</button>
