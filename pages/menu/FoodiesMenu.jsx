@@ -23,7 +23,6 @@ export async function getServerSideProps () {
 };
 
 export default function FoodiesMenu ( { dataFull } ) {
-    const { results = [] } = dataFull;
     return (
         <div>
             <FoodiesMenuHead />
@@ -90,12 +89,11 @@ export default function FoodiesMenu ( { dataFull } ) {
                 </div>
             </div>
             <div className="w-full mt-16 px-14 grid grid-cols-4 gap-4">
-                { results.map( result => {
-                    const { id, name, image, description, price, category } = result;
+                { dataFull.map( ( { id, name, image, description, price, category } ) => {
                     return (
                         <div className="w-full rounded-lg m-2" key={ id }>
                             <div>
-                                <img src={ image } key={ id } alt={ image } />
+                                <img src={ image } key={ id } alt={ image } className="rounded-lg" />
                             </div>
                             <div className="p-5 space-y-3">
                                 <div>
