@@ -7,30 +7,23 @@ const FoodiesMenuHead = () => {
         <Head>
             <title>Foodies - Menu</title>
         </Head>
-    );
+    );  
 };
 
-const Cards = () => {
-    return (
-        <div className="w-full rounded-lg m-2">
-            <div>
-                <img src="../../images/menu/hamburgerExample.png" alt="hamburgerExample.png" />
-            </div>
-            <div className="p-5 space-y-3">
-                <div>
-                    <h1 className="font-syne text-xl font-bold mb-5">La imposible</h1>
-                    <p className="text-lg leading-tight font-medium">1/2 Libra de carne envuelta en tocíno, con cebolla morada, queso cheddar, especias... </p>
-                </div>
-                <div className="flex flex-row items-center justify-between">
-                    <p className="text-lg text-gray-400">Recomendaciones</p>
-                    <div className="text-sm font-druk font-bold bg-yellow px-3 rounded-lg">$91.00</div>
-                </div>
-            </div>
-        </div>
-    );
+export async function getServerSideProps () {
+    const defaultEndPoint = "https://api.elaniin.dev/api/menu";
+    const res = await fetch( defaultEndPoint );
+    const fullData = await res.json();
+    const dataFull = fullData.data;
+    return {
+        props: { 
+            dataFull
+        }
+    };
 };
 
-const FoodiesMenu = () => {
+export default function FoodiesMenu ( { dataFull } ) {
+    const { results = [] } = dataFull;
     return (
         <div>
             <FoodiesMenuHead />
@@ -97,18 +90,26 @@ const FoodiesMenu = () => {
                 </div>
             </div>
             <div className="w-full mt-16 px-14 grid grid-cols-4 gap-4">
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
+                { results.map( result => {
+                    const { id, name, image, description, price, category } = result;
+                    return (
+                        <div className="w-full rounded-lg m-2" key={ id }>
+                            <div>
+                                <img src={ image } key={ id } alt={ image } />
+                            </div>
+                            <div className="p-5 space-y-3">
+                                <div>
+                                    <h1 className="font-syne text-xl font-bold mb-5">{ name }</h1>
+                                    <p className="text-lg leading-tight font-medium">{ description }</p>
+                                </div>
+                                <div className="flex flex-row items-center justify-between">
+                                    <p className="text-lg text-gray-400">{ category }</p>
+                                    <div className="text-sm font-druk font-bold bg-yellow px-3 rounded-lg">${ price }</div>
+                                </div>
+                            </div>
+                        </div>
+                        ) 
+                    } ) }
             </div>
             <div className="m-20 flex flex-row justify-center space-x-2">
                 <button className="bg-black text-yellow border font-bold border-black px-4 py-2 rounded-md">1</button>
@@ -121,5 +122,3 @@ const FoodiesMenu = () => {
         </div>
     );
 };
-
-export default FoodiesMenu;
