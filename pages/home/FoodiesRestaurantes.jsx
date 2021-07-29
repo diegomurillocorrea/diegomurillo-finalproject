@@ -1,6 +1,5 @@
 import Map from "./Map";
-import credentials from "./credentials";
-const mapUrl = `https://maps.googleapis.com/maps/api/js?v=3.exp&key=${credentials.mapsKey}`;
+const mapUrl = `https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyATihDvFy3EGFH7rpHVrFqmhNrWQnu0eDs`;
 
 const info = {
     place: "Sucursal San Benito",
