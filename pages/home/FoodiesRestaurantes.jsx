@@ -1,5 +1,4 @@
-import Map from "./Map";
-const mapUrl = `https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyATihDvFy3EGFH7rpHVrFqmhNrWQnu0eDs`;
+import GoogleMaps from "./Map";
 
 const info = {
     place: "Sucursal San Benito",
@@ -53,12 +52,7 @@ export default function FoodiesMap () {
                 </div>
             </div>
             <div className="w-map">
-                <Map
-                    googleMapURL={ mapUrl }
-                    containerElement={ <div style={{ height: "515px" }} /> }
-                    mapElement={ <div style={{ height: "100%" }} /> }
-                    loadingElement={ <p className="font-syne font-bold">Loading...</p> }
-                />
+                <GoogleMaps />
             </div>
         </div>
     );
