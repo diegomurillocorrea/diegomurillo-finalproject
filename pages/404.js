@@ -2,12 +2,12 @@ import Head from "next/head";
 import Image from "next/image";
 import errorSearchImg from "../public/images/emptyStateImages/errorSearch.svg";
 
+const HeadTitle = () => <Head><title>Foodies | 404</title></Head>;
+
 const ErrorSearchScreen = () => {
     return (
         <div className="h-screen w-full flex justify-center items-center flex-col">
-            <Head>
-                <title>Error Search - Foodies</title>
-            </Head>
+            <HeadTitle />
             <Image
                 src={ errorSearchImg }
                 alt="errorSearch.svg"

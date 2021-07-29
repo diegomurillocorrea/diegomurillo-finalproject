@@ -24,8 +24,8 @@ export default function FoodiesContactanos () {
                         </label>
                     </div>
                 </div>
-                <div className="flex flex-row justify-end mt-5 mx-60">
-                    <input type="submit" value="Enviar comentarios" className="hover:bg-yellow-300 cursor-pointer transition-all btn-6 px-5 py-3 rounded bg-yellow font-noto font-bold" />
+                <div className="flex flex-row justify-end mt-5 mx-60 transform hover:translate-y-1 transition duration-300">
+                    <input type="submit" value="Enviar comentarios" className="hover:bg-yellow-300 transition duration-300 cursor-pointer px-5 py-3 rounded bg-yellow font-noto font-bold" />
                 </div>
             </form>
         </div>

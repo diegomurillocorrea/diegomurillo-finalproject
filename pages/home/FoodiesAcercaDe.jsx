@@ -30,7 +30,7 @@ export default function FoodiesAcercaDe () {
                 <div className="mt-40 px-10 space-y-5 z-10">
                     <h2 className="font-syne font-bold text-2xl">¿Quién es Foodies?</h2>
                     <p className="text-gray-500 text-lg">Elit irure ad nulla id elit laborum nostrud mollit irure. Velit reprehenderit sunt nulla enim aliquip duis tempor est culpa fugiat consequat culpa consectetur Lorem. Reprehenderit dolore culpa irure eiusmod minim occaecat et id minim ullamco.</p>
-                    <button className="font-syne font-bold text-2xl">Contáctanos &nbsp;<img className="inline-block" src="../images/icons/arrow-right.svg" alt="arrow-right.svg" /></button>
+                    <button className="hover:translate-x-5 transform border-b-2 border-transparent hover:border-black transition duration-300 font-syne font-bold text-2xl">Contáctanos &nbsp;<img className="inline-block" src="../images/icons/arrow-right.svg" alt="arrow-right.svg" /></button>
                 </div>
             </div>
         </div>

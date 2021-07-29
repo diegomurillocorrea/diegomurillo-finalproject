@@ -6,9 +6,9 @@ const FoodiesFooter = () => {
                     <h1 className="font-druk text-2xl text-gray-500 ml-32">Foodies</h1>
                 </div>
                 <div className="flex flex-row w-1/2 ml-60">
-                    <img src="../../images/home/appStoreImg.svg" alt="appStoreImg.svg" />
+                    <img src="../../images/home/appStoreImg.svg" alt="appStoreImg.svg" className="cursor-pointer" />
                     <span className="w-2"></span>
-                    <img src="../../images/home/playStoreImg.svg" alt="playStoreImg.svg" />
+                    <img src="../../images/home/playStoreImg.svg" alt="playStoreImg.svg" className="cursor-pointer" />
                 </div>
             </div>
             <hr className="border-yellow" />

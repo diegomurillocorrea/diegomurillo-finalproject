@@ -7,7 +7,7 @@ import FoodiesContactanos from "./home/FoodiesContactanos";
 import FoodiesApp from "./home/FoodiesApp";
 import FoodiesFooter from "./home/FoodiesFooter";
 
-const HeadTitle = () => <Head><title>Foodies</title></Head>
+const HeadTitle = () => <Head><title>Foodies | Home</title></Head>
 
 export default function IndexPage () {
     return (

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Foodies = () => {
+export default function Foodies () {
     return (
         <div className="w-full">
             <div className="lg:flex lg:justify-end lg:absolute lg:-mt-0 w-full">
@@ -13,21 +13,21 @@ const Foodies = () => {
             <nav className="flex flex-row justify-around lg:mt-11 md:mt-5 relative z-10">  
                 <div className="w-1/4 flex justify-center">
                     <Link href="./">
-                        <a className="font-druk text-2xl hover:underline">Foodies</a>
+                        <a className="font-druk text-2xl border-b-2 border-transparent hover:border-yellow transition duration-300 hover:translate-y-1 transform">Foodies</a>
                     </Link>
                 </div>
                 <div className="flex flex-row justify-start w-3/4 font-bold text-lg mt-1">
                     <Link href="#acercaDe">
-                        <a className="font-syne -ml-5 mx-5">Acerca de</a>
+                        <a className="font-syne -ml-5 mx-5 border-b-2 border-transparent hover:border-yellow transition duration-300 hover:translate-y-1 transform">Acerca de</a>
                     </Link>
                     <Link href="#restaurantes">
-                        <a className="font-syne mx-5">Restaurantes</a>
+                        <a className="font-syne mx-5 border-b-2 border-transparent hover:border-yellow transition duration-300 hover:translate-y-1 transform">Restaurantes</a>
                     </Link>
                     <Link href="./menu/FoodiesMenu">
-                        <a className="font-syne mx-5">Menú</a>
+                        <a className="font-syne mx-5 border-b-2 border-transparent hover:border-yellow transition duration-300 hover:translate-y-1 transform">Menú</a>
                     </Link>
                     <Link href="#contactanos">
-                        <a className="font-syne mx-5">Contáctanos</a>
+                        <a className="font-syne mx-5 border-b-2 border-transparent hover:border-yellow transition duration-300 hover:translate-y-1 transform">Contáctanos</a>
                     </Link>
                 </div>
             </nav>
@@ -35,10 +35,8 @@ const Foodies = () => {
                 <h1 className="font-druk font-bold lg:text-6xl md:text-4xl z-10">Un nuevo sabor esta en la ciudad</h1>
                 <span className="bg-yellow lg:w-4/6 md:w-full lg:h-14 md:h-10 lg:-ml-2 md:-ml-1 lg:-mt-12 md:-mt-10 lg:mb-5"></span>
                 <p className="font-noto lg:text-lg md:text-base md:pr-12 md:pt-4 lg:pr-20 text-gray-400 mb-10">Estamos a punto de descubrir un mundo lleno de sabores y de emociones inigualables.</p>
-                <button className="font-syne font-bold md:text-lg md:-mt-5 lg:text-2xl z-10">Encuentranos &nbsp;<img className="inline-block" src="../images/icons/arrow-right.svg" alt="arrow-right.svg" /></button>
+                <button className="hover:translate-x-5 transform font-syne font-bold md:text-lg md:-mt-5 lg:text-2xl z-10 border-b-2 border-transparent hover:border-black transition duration-300">Encuentranos &nbsp;<img className="inline-block" src="../images/icons/arrow-right.svg" alt="arrow-right.svg" /></button>
             </div>
         </div>
     );
 };
-
-export default Foodies;
