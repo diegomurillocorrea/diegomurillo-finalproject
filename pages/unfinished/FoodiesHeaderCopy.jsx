@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Foodies = () => {
+export default function FoodiesHeaderCopy () {
     return (
         <div className="w-full">
             {/* NavBar */}
@@ -61,8 +61,3 @@ const Foodies = () => {
         </div>
     );
 };
-
-/*
-*/
-
-export default Foodies;

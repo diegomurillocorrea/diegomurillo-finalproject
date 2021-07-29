@@ -13,20 +13,20 @@ const Foodies = () => {
             <nav className="flex flex-row justify-around lg:mt-11 md:mt-5 relative z-10">  
                 <div className="w-1/4 flex justify-center">
                     <Link href="./">
-                        <a className="font-druk text-2xl">Foodies</a>
+                        <a className="font-druk text-2xl hover:underline">Foodies</a>
                     </Link>
                 </div>
                 <div className="flex flex-row justify-start w-3/4 font-bold text-lg mt-1">
-                    <Link href="#">
+                    <Link href="#acercaDe">
                         <a className="font-syne -ml-5 mx-5">Acerca de</a>
                     </Link>
-                    <Link href="#">
+                    <Link href="#restaurantes">
                         <a className="font-syne mx-5">Restaurantes</a>
                     </Link>
                     <Link href="./menu/FoodiesMenu">
                         <a className="font-syne mx-5">Menú</a>
                     </Link>
-                    <Link href="#">
+                    <Link href="#contactanos">
                         <a className="font-syne mx-5">Contáctanos</a>
                     </Link>
                 </div>

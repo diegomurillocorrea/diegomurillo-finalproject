@@ -1,21 +1,22 @@
 import Head from "next/head";
 import Link from "next/link";
 import FoodiesFooter from "../home/FoodiesFooter";
-import menu from "../api/menu";
-import categories from "../api/categories";
 
-const FoodiesMenuHead = () => {
-    return (
-        <Head>
-            <title>Foodies - Menu</title>
-        </Head>
-    );  
+const FoodiesMenuHead = () => <Head><title>Foodies - Menu</title></Head>;
+
+export async function getServerSideProps () {
+    const defaultEndPointMenu = "https://api.elaniin.dev/api/menu";
+    const resMenu = await fetch( defaultEndPointMenu );
+    const fullDataMenu = await resMenu.json();
+    const dataFullMenu = fullDataMenu.data;
+    return {
+        props: { 
+            dataFullMenu
+        }
+    };
 };
 
-/* const dataFullMenu = menu;
-const dataFullCategories = categories; */
-
-export default function FoodiesMenu ( /* { dataFullMenu, dataFullCategories } */ ) {
+export default function FoodiesMenu ( { dataFullMenu } ) {
     return (
         <div>
             <FoodiesMenuHead />
@@ -33,10 +34,10 @@ export default function FoodiesMenu ( /* { dataFullMenu, dataFullCategories } */
                         </Link>
                     </div>
                     <div className="flex flex-row justify-items-start w-3/4 font-bold text-lg mt-1">
-                        <Link href="#">
+                        <Link href="../#acercaDe">
                             <a className="font-syne -ml-5 mx-5">Acerca de</a>
                         </Link>
-                        <Link href="#">
+                        <Link href="../#restaurantes">
                             <a className="font-syne mx-5">Restaurantes</a>
                         </Link>
                         <div className="flex flex-col">
@@ -45,7 +46,7 @@ export default function FoodiesMenu ( /* { dataFullMenu, dataFullCategories } */
                             </Link>
                             <span className="w-16 h-2 absolute ml-3 mt-4 bg-yellow"></span>
                         </div>
-                        <Link href="#">
+                        <Link href="../#contactanos">
                             <a className="font-syne mx-5">Contáctanos</a>
                         </Link>
                     </div>
@@ -69,22 +70,20 @@ export default function FoodiesMenu ( /* { dataFullMenu, dataFullCategories } */
                             </li>
                             <span className="w-16 h-2 absolute -ml-2 mt-3 bg-yellow"></span>
                         </div>
-                        {/* {
-                            .map( ( { id, name } ) => {
-                                return (
-                                    <>
-                                        <li key={ id }>
-                                            { name }
-                                        </li>
-                                    </>
-                                );
-                            } )
-                        } */}
+                        <li>
+                            Las tradicionales
+                        </li>
+                        <li>
+                            Recomendaciones
+                        </li>
+                        <li>
+                            Para compartir
+                        </li>
                     </ul>
                 </div>
             </div>
             <div className="w-full mt-16 px-14 grid grid-cols-4 gap-4">
-                {/* { .map( ( { id, name, image, description, price, category } ) => {
+                { dataFullMenu.map( ( { id, name, image, description, price, category } ) => {
                     return (
                         <div className="w-full rounded-lg m-2" key={ id }>
                             <div>
@@ -102,7 +101,7 @@ export default function FoodiesMenu ( /* { dataFullMenu, dataFullCategories } */
                             </div>
                         </div>
                         ) 
-                    } ) } */}
+                    } ) }
             </div>
             <div className="m-20 flex flex-row justify-center space-x-2">
                 <button className="bg-black text-yellow border font-bold border-black px-4 py-2 rounded-md">1</button>

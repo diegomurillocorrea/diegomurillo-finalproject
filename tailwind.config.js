@@ -11,6 +11,7 @@ module.exports = {
       colors: {
         yellow: {
           "200": "#FFF1BF",
+          "300": "#FFEA79",
           DEFAULT: "#FFD600",
           "600": "#E6B300"
         },
@@ -19,6 +20,7 @@ module.exports = {
   },
   variants: {
     extend: {
+      textDecoration: ['active']
   },
 },
   plugins: [],

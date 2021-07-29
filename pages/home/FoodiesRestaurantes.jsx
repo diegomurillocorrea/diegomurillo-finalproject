@@ -2,12 +2,18 @@ import Map from "./Map";
 import credentials from "./credentials";
 const mapUrl = `https://maps.googleapis.com/maps/api/js?v=3.exp&key=${credentials.mapsKey}`;
 
+const info = {
+    place: "Sucursal San Benito",
+    schedule: "Abierto de 12:00 m.d. - 9:00 p.m.",
+    address: "Calle la Reforma #543, Colonia San Benito"
+};
+
 const NormalMapCard = () => {
     return (
         <div className="pl-5 pr-44 py-3 border border-gray-500 rounded-md">
-            <h1 className="font-syne font-bold text-xl">Sucursal San Benito</h1>
-            <p className="font-noto">Abierto de 12:00 m.d. - 9:00 p.m.</p>
-            <p className="font-noto">Calle la Reforma #543, Colonia San Benito</p>
+            <h1 className="font-syne font-bold text-xl">{ info.place }</h1>
+            <p className="font-noto">{ info.schedule }</p>
+            <p className="font-noto">{ info.address }</p>
         </div>
     );
 };
@@ -15,16 +21,16 @@ const NormalMapCard = () => {
 const SelectedMapCard = () => {
     return (
         <div className="bg-yellow-200 pl-5 pr-44 py-3 rounded-md mt-2">
-            <h1 className="font-syne font-bold text-xl">Sucursal San Benito</h1>
-            <p className="font-noto">Abierto de 12:00 m.d. - 9:00 p.m.</p>
-            <p className="font-noto">Calle la Reforma #543, Colonia San Benito</p>
+            <h1 className="font-syne font-bold text-xl">{ info.place }</h1>
+            <p className="font-noto">{ info.schedule }</p>
+            <p className="font-noto">{ info.address }</p>
         </div>
     );
 };
 
-const FoodiesMap = () => {
+export default function FoodiesMap () {
     return (
-        <div className="flex flex-row w-full mt-36">
+        <div id="restaurantes" className="flex flex-row w-full mt-36">
             <div className="w-input flex flex-col">
                 <h1 className="font-druk text-4xl text-center px-5 pb-7">Estamos para ti</h1>
                 <div className="flex flex-row">
@@ -58,5 +64,3 @@ const FoodiesMap = () => {
         </div>
     );
 };
-
-export default FoodiesMap;

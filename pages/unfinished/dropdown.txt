@@ -106,3 +106,65 @@ const NavBar3 = () => {
                 </div>
             </div>
     </nav>
+
+    <nav className="flex flex-row justify-around mt-11 relative z-10">  
+            <div className="w-1/4 flex justify-center">
+                <Link href="./">
+                    <a className="font-druk lg:text-2xl">Foodies</a>
+                </Link>
+            </div>
+            <div className="flex flex-row lg:justify-start lg:w-3/4 font-bold text-lg mt-1">
+                <Link href="#">
+                    <a className="font-syne -ml-5 mx-5">Acerca de</a>
+                </Link>
+                <Link href="#">
+                    <a className="font-syne mx-5">Restaurantes</a>
+                </Link>
+                <Link href="./menu/FoodiesMenu">
+                    <a className="font-syne mx-5">Menú</a>
+                </Link>
+                <Link href="#">
+                    <a className="font-syne mx-5">Contáctanos</a>
+                </Link>
+            </div>
+        </nav>
+
+        export default function NavBar () {
+    const [ open, isOpen ] = useState( true );
+    return(
+        <nav className="lg:flex lg:py-10 lg:justify-between w-full">
+            <div className="lg:w-1/4 lg:flex lg:justify-center lg:items-center">
+                <Link href="./">
+                    <a>
+                        <span className="font-druk text-2xl">Foodies</span>
+                    </a>
+                </Link>
+            </div>
+            <div>
+
+            </div>
+            <div className="lg:flex lg:justify-start lg:w-3/4 lg:space-x-9 lg:items-center relative z-10">
+                <Link href="#">
+                    <a>
+                        <span className="font-syne font-bold text-lg">Acerca de</span>
+                    </a>
+                </Link>
+                <Link href="#">
+                    <a>
+                        <span className="font-syne font-bold text-lg">Restaurantes</span>
+                    </a>
+                </Link>
+                <Link href="./menu/FoodiesMenu">
+                    <a>
+                        <span className="font-syne font-bold text-lg">Menú</span>
+                    </a>
+                    </Link>
+                <Link href="#">
+                    <a>
+                        <span className="font-syne font-bold text-lg z-10">Contáctanos</span>
+                    </a>
+                </Link>
+            </div>
+        </nav>
+    );
+};

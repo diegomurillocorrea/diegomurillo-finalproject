@@ -1,30 +1,25 @@
 import Head from "next/head";
-/* import FoodiesHeader from "./home/FoodiesHeader"; */
-import Foodiescopy from "./home/Foodiescopy";
 import FoodiesHeader from "./home/FoodiesHeader";
-import FoodiesForm from "./home/FoodiesForm";
-import FoodiesInfo from "./home/FoodiesInfo";
-import FoodiesMap from "./home/FoodiesMap";
+import FoodiesAcercaDe from "./home/FoodiesAcercaDe";
+import FoodiesRestaurantes from "./home/FoodiesRestaurantes";
 import FoodiesSlide from "./home/FoodiesSlide";
+import FoodiesContactanos from "./home/FoodiesContactanos";
 import FoodiesApp from "./home/FoodiesApp";
 import FoodiesFooter from "./home/FoodiesFooter";
 
-const IndexPage = () => {
+const HeadTitle = () => <Head><title>Foodies</title></Head>
+
+export default function IndexPage () {
     return (
         <div>
-            <Head>
-                <title>Foodies</title>
-            </Head> 
+            <HeadTitle />
             <FoodiesHeader />
-            {/* <Foodiescopy /> */}
-            {/* <FoodiesInfo />
-            <FoodiesMap />
+            <FoodiesAcercaDe />
+            <FoodiesRestaurantes />
             <FoodiesSlide />
-            <FoodiesForm />
+            <FoodiesContactanos />
             <FoodiesApp />
-            <FoodiesFooter /> */}
+            <FoodiesFooter />
         </div>
     );
 };
-
-export default IndexPage;

@@ -19,6 +19,14 @@
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+.fill-current {
+    fill: black;
+}
+
 .w-span {
     width: 70%;
 }

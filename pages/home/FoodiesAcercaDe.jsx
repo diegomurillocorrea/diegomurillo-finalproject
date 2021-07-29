@@ -1,6 +1,6 @@
-const FoodiesInfo = () => {
+export default function FoodiesAcercaDe () {
     return (
-        <div className="flex flex-row mt-56 w-full">
+        <div id="acercaDe" className="flex flex-row mt-56 w-full">
             <div className="w-food-art">
                 <div className="relative">
                     <img 
@@ -36,5 +36,3 @@ const FoodiesInfo = () => {
         </div>
     );
 };
-
-export default FoodiesInfo;
