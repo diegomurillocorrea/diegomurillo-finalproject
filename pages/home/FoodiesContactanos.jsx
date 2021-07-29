@@ -3,7 +3,7 @@ export default function FoodiesContactanos () {
         <div id="contactanos" className="w-full flex flex-col bg-black py-20 -mt-10">
             <div className="flex flex-col items-center space-y-5">
                 <h1 className="font-druk text-3xl text-white">Cuentanos tu experiencia</h1>
-                <p className="font-noto text-xl text-white px-85 text-center">Don't miss out on our great offers & Receive deals from all our top restaurants via e-mail.</p>
+                <p className="font-noto text-xl text-white px-85 text-center">Don&apos;t miss out on our great offers & Receive deals from all our top restaurants via e-mail.</p>
             </div>
             <form>
                 <div className="flex flex-row justify-center mt-7">

@@ -1,4 +1,4 @@
-const FoodiesFooter = () => {
+export default function FoodiesFooter () {
     return (
         <div className="space-y-10 mt-34 mb-10">
             <div className="w-full flex flex-row justify-around items-center">
@@ -24,5 +24,3 @@ const FoodiesFooter = () => {
         </div>
     );
 };
-
-export default FoodiesFooter;

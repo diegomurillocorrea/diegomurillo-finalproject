@@ -1,4 +1,4 @@
-const FoodiesSlide = () => {
+export default function FoodiesSlide () {
     return (
         <div className="flex flex-row w-full mt-10 mb-5">
 
@@ -10,7 +10,7 @@ const FoodiesSlide = () => {
 
             <div className="w-2/4 flex flex-col justify-center items-center space-y-5">
                 <h1 className="font-druk text-3xl text-center">
-                    "El mejor lugar para degustar en familia y amigos!"
+                    &quot;El mejor lugar para degustar en familia y amigos!&quot;
                 </h1>
                 <p className="font-noto text-gray-500 text-center mx-24">
                     Es el mejor lugar al que he venido con  mi familia, la comida
@@ -38,5 +38,3 @@ const FoodiesSlide = () => {
         </div>
     );
 };
-
-export default FoodiesSlide;

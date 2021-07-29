@@ -2,8 +2,7 @@ const Circle = props => {
     return <div className="rounded-full bg-yellow text-white text-center font-bold font-noto p-1">{ props.number }</div>
 };
 
-const FoodiesApp = () => {
-
+export default function FoodiesApp () {
     return (
         <div className="w-full flex flex-col mb-40">
             <div className="w-full flex flex-row">
@@ -51,5 +50,3 @@ const FoodiesApp = () => {
         </div>
     );
 };
-
-export default FoodiesApp;
