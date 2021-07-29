@@ -9,4 +9,4 @@
 ### Copy and paste this line of code in your terminal:
 ```git clone https://github.com/diegomurillocorrea/diegomurillo-finalproject```
 ### Congrats! there you have the cloned final project!
-#<Happy coding! />
+<Happy coding! />
